@@ -6,6 +6,6 @@ echo "Enter command you want to do after "$PID" has ended."
 read COMMAND
 echo "You are going to do $COMMAND after $PID has been shutdown."
 while  ps -p $PID >  /dev/null
-do sleep
+do sleep >   /dev/null  2>&1
 done
 $COMMAND
